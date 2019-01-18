@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    
+    <!-- 입력 받는 값에 따라 다르게 사용하기 위하여 빈 4개를 구성  -->
+    <bean id="fileToConsole" class="VO.MainVO">
+    	<property name="inputType" value="file"/>
+    	<property name="outputType" value="console"/>
+    </bean>
+    
+    <bean id="fileToFile" class="VO.MainVO">
+    	<property name="inputType" value="file"/>
+    	<property name="outputType" value="file"/>
+    </bean>
+    
+    <bean id="consoleToFile" class="VO.MainVO">
+    	<property name="inputType" value="console"/>
+    	<property name="outputType" value="file"/>
+    </bean>
+    
+    <bean id="consoleToConsole" class="VO.MainVO">
+    	<property name="inputType" value="console"/>
+    	<property name="outputType" value="console"/>
+    </bean>
+    
+    <!--1  -->
+   <!--  <bean id="input" class="project.Input">
+    	
+    
+    </bean>
+    
+    <bean id="consoleToConsole" class="VO.MainVO">
+    	<property name="inputType" value="console"/>
+    	<property name="outputType" value="file"/>
+    	2
+    	<property name="input" ref="input" />
+    </bean> -->
+</beans>
